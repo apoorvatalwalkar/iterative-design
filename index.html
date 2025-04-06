@@ -1,1 +1,145 @@
+  <!-- TO RUN IN BROWSER:
+    1. Install vscode extension Name: open in `browser open-in-browser` by TechER
+    2. Right click html file and either run in default browser or another browser
+  -->
 
+  
+
+  <!DOCTYPE html>
+    <html>
+        <link rel = "stylesheet" href="styles.css">
+        <head>
+            <title>Iterative Design and Evaluation</title>
+            <link rel="stylesheet" href="https://use.typekit.net/yjo4jeo.css">
+        </head>
+        <div class="topnav">
+            <p>Alex, Apoorva, Josh, Spandan</p>
+            <p> Iterative Design and Evaluation</p>
+        </div>
+        <div class="header">
+            <h1>Iterative Design</h1>
+            <h2>Warp AI Community</h2>
+        </div>
+        <body>
+            <div class="flex-container" style="padding-bottom: 20px">
+                <h4 style="text-align: center;">Contents</h4>
+                <div style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                ">
+                <a href="#context">Context</a>
+                <a href="#getting-started">Getting Started</a>
+                <a href="#sketches">Sketches and Prototyping</a>
+                </div>
+
+                <hr class="solid" style="margin-top: 20px;">
+
+            </div>
+
+            <div class="flex-container" id="overview">
+                <h4>Overview</h3>
+                <h4 style="margin-bottom: 30px; color: white">Background</h3>
+                <p style="line-height:0.5; padding-top:10px; color: white;">Collaborators</p>
+                <p>
+                    Alexander Koong, Apoorva Talwalkar, Joshua Yang, Spandan Goel
+                </p>
+
+                <p style="line-height:0.5; padding-top:10px; color: white">Customer</p>
+                <p>
+                    Warp AI
+                </p>
+
+                <p style="line-height:0.5; padding-top:10px; color: white">Product</p>
+                <p>Warp AI Community Page</p>
+                
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="context">
+                <h3 style="color:rgb(137, 121, 160)">Context</h3>
+                <h3 style="margin-bottom: 30px; color: white">About the Project</h3>
+                <p>
+                    Warp is a startup trying to modernize the conventional terminal with artificial intelligence features. With features like automatic command completion, smart suggestions for tons of CLI tools, and numerous quality-of-life improvements for users, Warp aims to optimize every developer’s workflow. 
+                    Our task is to design a community page for Warp, where users can share everything from simple workflows to complex automations, even if they’re an individual hobbyist dev or an industry professional who relies on Warp every day. This community page will be a website supported on both desktop and mobile devices. 
+                </p>
+                
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="getting-started">
+                <h4 style="color:#6f839f">Getting Started</h4>
+                <h4 style="margin-bottom: 30px; color:white">Present Factors</h4>
+                
+                <p style="line-height:0.5; padding-top:10px; color: white;">Existing Considerations</p>
+                <p>
+                    Users currently share solutions through fragmented channels (GitHub, Reddit, Discord, Twitter). Some solutions are shared via blog posts but lack standardization and easy implementation.
+                    Competitive products may have partial solutions but lack comprehensive community features. Interface needs to balance discovery with ease of implementation
+                </p>
+                <p style="line-height:0.5; padding-top:10px; color: white;">Customer Motivations</p>
+                <p>
+                    Desire to improve productivity and output quality when working with AI tools. Want to learn best practices from other experienced users. Seek to stay current with rapidly evolving AI techniques and approaches. 
+                    Hope to reduce time spent creating rules, plans, and prompts from scratch. Interested in benchmarking their own approaches against others in the community. 
+                    Motivated to contribute their knowledge to help others and establish professional credibility
+                </p>
+                <p style="line-height:0.5; padding-top:10px; color: white;">Problems with Existing Solutions</p>
+                <p>
+                    Significant time spent reinventing solutions that others have already created. Difficulty finding high-quality, relevant examples of rules, plans, and prompts. Uncertainty about whether their current approach is optimal or efficient.
+                    Limited visibility into how others are solving similar problems. No streamlined way to implement discovered solutions into their existing projects. Frustration with the trial-and-error process when creating new prompts or rules. Lack of feedback on their own created content
+                </p>
+                <p style="line-height:0.5; padding-top:10px; color: white;">Competitors</p>
+                <p>
+                    Windsurf, Cursor, Claude Code, Devin
+            </div>
+
+            <div class="flex-container" style="background-color:rgba(41, 41, 41, 0.5); padding: 50px 280px;" id="goals">
+                <h4 style="text-align: center; color:white">Goals of the Project</h4>
+                <p style="text-align: center; margin-bottom: 20px; margin-top:5px">Design an communit hub for users where they can <b>post and view rules, plans, and prompt templates</b>.</p>
+                <h4 style="text-align: center;">Specifics</h4>
+                <ul style="
+                font-family: aktiv-grotesk, sans-serif;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 1.2;
+                margin: 5px 0px">
+                    <li>Create a template for users to standardize posts and streamline the posting process</li>
+                    <li>Increase access to guides so users can learn from other experienced users</li>
+                    <li></li>
+                </ul>
+
+            </div>
+
+            <div class="flex-container" id="visual-redesign">
+                <h3 style="color: #7a571f">Part Two</h3>
+                <h3 style="margin-bottom: 30px; color:white">Sketching and Wireframing</h3>
+                <p style="line-height:0.5; padding-top:10px; color: white;">Problem Statement</p>
+                <p>
+                    Warp developers often find AI-powered solutions to their development woes that can be heavily tailored to individual needs. Such information in the forms of Rules, Prompts, and Plans (RPP) is scattered across the internet (in forum posts, blogs, social media, and more) and easily becomes outdated. 
+                    Warp Community aims to centralize and maintain this knowledge, by providing an easy way for users to post, organize, and search for it. This should help developers from various backgrounds end up on the same page and enhance their usage of Warp.
+                </p>
+
+                <p style="line-height:0.5; padding-top:10px; color: white;">Target Users</p>
+                <p style="margin-bottom:30px">
+                    AI development professionals who are actively working with AI tools to build or integrate solutions. 
+                    They span from intermediate developers who are looking to improve their workflow efficiency to advanced power users who create complex automations. 
+                    They typically work in small to medium-sized teams, are technology early adopters, and value both practical solutions and innovation. 
+                    They regularly use AI devtools but feel they're not maximizing their potential.
+                </p>
+
+                <h4 style="color:white">Sketches</h4>
+                <h4 style="color:white">Wireframe</h4>
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="results">
+                <h4>Final</h4>
+                <H3>The Result</H3>
+                
+                <p>txt here</p>
+
+            </div>
+            
+            
+            
+        </body>
+    </html>
