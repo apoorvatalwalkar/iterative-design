@@ -23,14 +23,11 @@
         <body>
             <div class="flex-container" style="padding-bottom: 20px">
                 <h4 style="text-align: center;">Contents</h4>
-                <div style="
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                ">
+                <div class="card-container" style="justify-content: space-around;">
                 <a href="#context">Context</a>
                 <a href="#getting-started">Getting Started</a>
-                <a href="#sketches">Sketches and Prototyping</a>
+                <a href="#sketches">Sketching and Wireframing</a>
+                <a href="#hi-fi">Hi-Fi Prototyping</a>
                 </div>
 
                 <hr class="solid" style="margin-top: 20px;">
@@ -38,30 +35,37 @@
             </div>
 
             <div class="flex-container" id="overview">
-                <h4>Overview</h3>
-                <h4 style="margin-bottom: 30px; color: white">Background</h3>
-                <p style="line-height:0.5; padding-top:10px; color: white;">Collaborators</p>
-                <p>
-                    Alexander Koong, Apoorva Talwalkar, Joshua Yang, Spandan Goel
-                </p>
-
-                <p style="line-height:0.5; padding-top:10px; color: white">Customer</p>
-                <p>
-                    Warp AI
-                </p>
-
-                <p style="line-height:0.5; padding-top:10px; color: white">Product</p>
-                <p>Warp AI Community Page</p>
                 
+                <div class="card-container">
+                    <div style="padding-right:50px">
+                        <h4 style="color: rgba(250, 249, 246, 0.7);">Overview</h3>
+                        <h4 style="margin-bottom: 30px;">Background</h3>
+                        <p style="line-height:0.5; padding-top:10px; color: white;">Collaborators</p>
+                        <p>
+                            Alexander Koong, Apoorva Talwalkar, Joshua Yang, Spandan Goel
+                        </p>
+
+                        <p style="line-height:0.5; padding-top:10px; color: white">Customer</p>
+                        <p>
+                            Warp AI
+                        </p>
+
+                        <p style="line-height:0.5; padding-top:10px; color: white">Product</p>
+                        <p>Warp AI Community Page</p>
+                    </div>
+                    <img src="assets/Related Natural Language Query.png" width="50%">
+                </div>
                 <hr class="solid">
             </div>
 
             <div class="flex-container" id="context">
-                <h3 style="color:rgb(137, 121, 160)">Context</h3>
-                <h3 style="margin-bottom: 30px; color: white">About the Project</h3>
+                <h3 style="color:rgb(137, 121, 160)">Part One</h3>
+                <h3 style="margin-bottom: 30px; color: white">Context</h3>
                 <p>
                     Warp is a startup trying to modernize the conventional terminal with artificial intelligence features. With features like automatic command completion, smart suggestions for tons of CLI tools, and numerous quality-of-life improvements for users, Warp aims to optimize every developer’s workflow. 
-                    Our task is to design a community page for Warp, where users can share everything from simple workflows to complex automations, even if they’re an individual hobbyist dev or an industry professional who relies on Warp every day. This community page will be a website supported on both desktop and mobile devices. 
+                    <br>
+                    <br>
+                    Through Brown’s CSCI 1300 course on interaction design, we’ve been tasked to design a community page for Warp in an official partnership through Google Ventures. Warp Community is where users share everything from simple workflows to complex automations, even if they’re an individual hobbyist dev or an industry professional who relies on Warp every day.
                 </p>
                 
                 <hr class="solid">
@@ -71,52 +75,76 @@
                 <h4 style="color:#6f839f">Getting Started</h4>
                 <h4 style="margin-bottom: 30px; color:white">Present Factors</h4>
                 
-                <p style="line-height:0.5; padding-top:10px; color: white;">Existing Considerations</p>
                 <p>
-                    Users currently share solutions through fragmented channels (GitHub, Reddit, Discord, Twitter). Some solutions are shared via blog posts but lack standardization and easy implementation.
-                    Competitive products may have partial solutions but lack comprehensive community features. Interface needs to balance discovery with ease of implementation
+                    After being onboarded to the project, we began familiarizing ourselves with Warp, its AI-augmented terminal sessions, and the “meta” objects (Prompts, Workflows, Environment Variables, and Notebooks) used, saved, and retrieved in local use of Warp. In addition to surveying competitors (Windsurf, Cursor, Claude Code, and Devin), we arrived at the present factors to inform our design of Warp Community:
                 </p>
-                <p style="line-height:0.5; padding-top:10px; color: white;">Customer Motivations</p>
-                <p>
-                    Desire to improve productivity and output quality when working with AI tools. Want to learn best practices from other experienced users. Seek to stay current with rapidly evolving AI techniques and approaches. 
-                    Hope to reduce time spent creating rules, plans, and prompts from scratch. Interested in benchmarking their own approaches against others in the community. 
-                    Motivated to contribute their knowledge to help others and establish professional credibility
-                </p>
-                <p style="line-height:0.5; padding-top:10px; color: white;">Problems with Existing Solutions</p>
-                <p>
-                    Significant time spent reinventing solutions that others have already created. Difficulty finding high-quality, relevant examples of rules, plans, and prompts. Uncertainty about whether their current approach is optimal or efficient.
-                    Limited visibility into how others are solving similar problems. No streamlined way to implement discovered solutions into their existing projects. Frustration with the trial-and-error process when creating new prompts or rules. Lack of feedback on their own created content
-                </p>
-                <p style="line-height:0.5; padding-top:10px; color: white;">Competitors</p>
-                <p>
-                    Windsurf, Cursor, Claude Code, Devin
+                <div class="card-container" style="padding: 50px 0px">
+                    <div class="card" style="width:270px">
+                        <p style="line-height:0.5; padding-top:10px; color: white;">Existing Considerations</p>
+                        <ul>
+                            <li>Users currently share solutions through fragmented channels (GitHub, Reddit, Discord, Twitter).</li>
+                            <li>Some solutions are shared via blog posts but lack standardization and easy implementation.</li>
+                            <li>Competitive products lack <i>comprehensive</i> community features.</li>
+                            <li>Interface needs to balance discovery with ease of implementation.</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="width:270px">
+                        <p style="line-height:0.5; padding-top:10px; color: white;">Customer Motivations</p>
+                        <ul>
+                            <li>Desire to improve productivity and output quality working with AI tools.</li>
+                            <li>Want to learn best practices from other experienced users. </li>
+                            <li>Seek to stay current with rapidly evolving AI techniques and approaches. </li>
+                            <li>Hope to reduce time spent creating rules, plans, and prompts from scratch.</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="width:270px">
+                        <p style="line-height:0.5; padding-top:10px; color: white;">Issues with Existing Solutions</p>
+                        <ul>
+                            <li>Difficulty finding high-quality, relevant examples of rules, plans, and prompts. </li>
+                            <li>Uncertainty about whether current approach is optimal or efficient.</li>
+                            <li>Limited visibility into how others are solving similar problems.</li>
+                            <li>No streamlined way to implement discovered solutions into existing projects.</li>
+                            <li>Lack of feedback on their own created content</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="flex-container" style="background-color:rgba(41, 41, 41, 0.5); padding: 50px 280px;" id="goals">
-                <h4 style="text-align: center; color:white">Goals of the Project</h4>
-                <p style="text-align: center; margin-bottom: 20px; margin-top:5px">Design an communit hub for users where they can <b>post and view rules, plans, and prompt templates</b>.</p>
-                <h4 style="text-align: center;">Specifics</h4>
-                <ul style="
-                font-family: aktiv-grotesk, sans-serif;
-                font-weight: 300;
-                font-size: 20px;
-                line-height: 1.2;
-                margin: 5px 0px">
-                    <li>Create a template for users to standardize posts and streamline the posting process</li>
-                    <li>Increase access to guides so users can learn from other experienced users</li>
-                    <li></li>
-                </ul>
+            <div class="flex-container" style="background-color:rgba(41, 41, 41, 0.5); " id="goals">
+                <h4 style="text-align:center; color:rgba(250, 249, 246, 0.7)">Goals of the Project</h4>
+                <h3 style="text-align:center; color: white">Design an community hub for users where they can
+                    post and view rules, plans, and prompt templates
+                </h3>
+
+                <div class="card-container" style="padding-top:50px">
+                    <div class="card" style="width: 440px">
+                        <h4 style="padding-left:10px">Gameplan</h4>
+                        <ul>
+                            <li>Create templates for users to standardize posts and streamline the posting process</li>
+                            <li>Increase access to guides so users can easily learn from other experienced users</li>
+                        </ul>
+
+                    </div>
+                    <div class="card" style="width: 440px">
+                        <h4 style="padding-left:10px">Success Metrics</h4>
+                        <p style="padding-left:10px">
+                            Create a platform that increases all the following metrics across Warp Terminal and Warp Community:
+                        </p>
+                        <ul style="margin-top:0px">
+                            <li>Contribution rate</li>
+                            <li>Implementation rate</li>
+                            <li>Time saved</li>
+                            <li>Overall user engagement</li>
+                        </ul>
+                        
+                    </div>
+                </div>
 
             </div>
 
-            <div class="flex-container" id="visual-redesign">
+            <div class="flex-container" id="sketches">
                 <h3 style="color: #7a571f">Part Two</h3>
                 <h3 style="margin-bottom: 30px; color:white">Sketching and Wireframing</h3>
-                <p style="line-height:0.5; padding-top:10px; color: white;">Problem Statement</p>
-                <p>
-                    Warp developers often find AI-powered solutions to their development woes that can be heavily tailored to individual needs. Such information in the forms of Rules, Prompts, and Plans (RPP) is scattered across the internet (in forum posts, blogs, social media, and more) and easily becomes outdated. 
-                    Warp Community aims to centralize and maintain this knowledge, by providing an easy way for users to post, organize, and search for it. This should help developers from various backgrounds end up on the same page and enhance their usage of Warp.
-                </p>
 
                 <p style="line-height:0.5; padding-top:10px; color: white;">Target Users</p>
                 <p style="margin-bottom:30px">
@@ -126,8 +154,83 @@
                     They regularly use AI devtools but feel they're not maximizing their potential.
                 </p>
 
-                <h4 style="color:white">Sketches</h4>
-                <h4 style="color:white">Wireframe</h4>
+                <h4 style="color:#7a571f">Individual</h4>
+                <h4 style="margin-bottom: 30px; color:white">Preliminary Sketches</h4>
+                <p>
+                    We started off by independently brainstorming designs for Warp Community, and drawing up the following sketches. Afterwards, we came together and synthesized components we liked from each member into a group-sketch on some whiteboards.
+                </p>
+                <h4>
+                    SPANDAN SCROLL COMPONENT W/ SKETCHES
+                </h4>
+
+                <h4 style="color:#7a571f; padding-top: 30px">Collaborative</h4>
+                <h4 style="margin-bottom: 30px; color:white">Wireframing</h4>
+                <p>
+                    Consolidating, we wrapped all sorts of variations on content–such as “article”, “text thread”, “note”, and more–into a single “post” entity that is the core unit of information for Warp Community objects. We realized too many forms of information potentially create confusion and mental overload for the user (i.e. avoiding four different forms for each object type). Technical users share their objects within posts (with great flexibility offered via markdown). A unified component brings consistency and immediate familiarity to the user.
+                    <br>
+                    <br>
+                    We mocked up our whiteboard-synthesizing of our sketches into lo-fi wireframes using Balsamiq.
+                </p>
+
+                <h4>
+                    FINALIZED ANNOTATED WIREFRAMES
+                </h4>
+
+
+                <h4 style="color:#7a571f; padding-top: 30px">Receiving</h4>
+                <h4 style="margin-bottom: 30px; color:white">Wireframe Feedback</h4>
+                <p>
+                    A weekend later, we got some feedback from the Warp team and met with Vanessa Cho, VP at Google Design. She gave us a ton of super crucial feedback - which was to focus on the success metrics. Our design so far had focused on providing a Warp Community interface to house shared Warp objects, but there was nothing that prioritized the Warp Terminal user. We didn’t connect the sharing platform with the app itself.
+                    <br>
+                    <br>
+                    This is something the Warp team also mentioned - why would one use Warp Community over Reddit, X, or HackerNews? We needed to provide a competitive advantage, one that would maximize user contribution rate, user implementation rate (usage in Warp Terminal), and most critically save time and boost engagement. 
+                    <br>
+                    <br>    
+                    Another thing we realized was less is more. In our hyper-focused approach, we had added a lot of vestigial components that would not be relevant to a Warp Terminal user. The users’ main pain point is about presenting, viewing, and utilizing information in an orderly, speedy fashion. How could we connect users within the Warp Terminal in a beneficial way with Warp Community?
+                </p>
+                <div class="card" style="padding:60px 100px">
+                    <h4 style="text-align:center; color: #b18949">Key Takeaway</h4>
+                    <h3 style="text-align:center; color: white">We needed to prioritize the success metrics and draw a path to the “house” we created to close the sharing loop.
+                    </h3>
+                </div>
+
+
+                <h4 style="color:#7a571f; padding-top: 30px">Replace with smth</h4>
+                <h4 style="margin-bottom: 30px; color:white">Iterating on Our Design </h4>
+                <p>
+                    So back to the whiteboard we went, and decided to think critically about the pathways users would take between Warp Community and Warp Terminal. As in, how does a workflow from someone’s Warp Drive actually end up on Warp Community? How does that same workflow save another user 3 hours of development effort?
+                </p>
+                <h4>PLACEHOLDER FOR WHITEBOARD IMAGE</h4>
+                <div class="card-container" style="padding: 50px 0px">
+                    <div class="card" style="width: 440px">
+                        <p style="line-height:0.5; padding-top:10px; color: white;">Proposed Interactions in Warp Terminal</p>
+                        <ul>
+                            <li>Getting suggested objects from Warp Community when querying the LLM, using the command palette</li>
+                            <li>Saving/starring objects for future usage </li>
+                            <li>Making copies of objects to edit and modify</li>
+                            <li>Publishing one’s objects to Warp Community</li>
+                            <li>Managing the version of the object on Warp Community</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="width: 440px">
+                        <p style="line-height:0.5; padding-top:10px; color: white;">Proposed Interactions in Warp Community</p>
+                        <ul>
+                            <li>Discovering popular, trending, and useful objects</li>
+                            <li>Searching for a specific object</li>
+                            <li>Viewing entire objects in the Warp Community UI itself</li>
+                            <li>Opening an object in Warp Terminal for viewing and editing</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <p>We quickly wrote up a technical document discussing this new redesign in much more detail than before, and sent it over to the Warp team. They were pleased with this new perspective, and our new strategy was successful! </p>
+
+                <hr class="solid">
+            </div>
+
+            <div class="flex-container" id="hi-fi">
+                <h3 style="color:rgb(137, 121, 160)">Part Three</h3>
+                <h3 style="margin-bottom: 30px; color:white">Hi-Fi Prototyping</h3>
                 <hr class="solid">
             </div>
 
