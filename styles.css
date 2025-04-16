@@ -169,7 +169,7 @@ li {
     font-weight: 300;
     font-size: 18px;
     margin: 10px 0px;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 p {
@@ -177,7 +177,7 @@ p {
     font-weight: 300;
     font-size: 18px;
     margin: 10px 0px;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 a {
@@ -199,4 +199,9 @@ a:hover {
     margin: 0px;
     padding: 20px;
     justify-content: center;
+}
+
+.highlight-white {
+    color: white;
+    font-weight: bold;
 }
