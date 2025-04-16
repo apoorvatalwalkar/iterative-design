@@ -7,6 +7,7 @@
 
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="./scroll-styles.css">
 <link rel="stylesheet" href="styles.css">
 
 <head>
@@ -186,6 +187,36 @@
         <h4>
             SPANDAN SCROLL COMPONENT W/ SKETCHES
         </h4>
+        <div> <!-- scroll section for all our sketches -->
+
+          <div class="scroll-section-wrapper" id="scroll-wrapper">
+            <div class="scroll-section" id="scroll-section">
+              <div class="horizontal-track" id="horizontal-track">
+                <img src="./assets/sketches/sketch1.png" alt="Sketch 1" />
+                <img src="./assets/sketches/sketch2.png" alt="Sketch 2" />
+                <img src="./assets/sketches/sketch3.png" alt="Sketch 3" />
+                <img src="./assets/sketches/sketch4.png" alt="Sketch 4" />
+                <img src="./assets/sketches/sketch5.png" alt="Sketch 5" />
+                <img src="./assets/sketches/sketch6.png" alt="Sketch 6" />
+                <img src="./assets/sketches/sketch7.png" alt="Sketch 7" />
+                <img src="./assets/sketches/sketch8.png" alt="Sketch 8" />
+                <img src="./assets/sketches/sketch9.png" alt="Sketch 9" />
+                <img src="./assets/sketches/sketch10.png" alt="Sketch 10" />
+                <img src="./assets/sketches/sketch11.png" alt="Sketch 11" />
+                <img src="./assets/sketches/sketch12.png" alt="Sketch 12" />
+                <img src="./assets/sketches/sketch13.png" alt="Sketch 13" />
+              </div>
+            </div>
+          </div>
+
+          <div id="image-overlay" class="hidden">
+            <div id="overlay-content">
+              <img id="overlay-img" src="" alt="" />
+              <p id="overlay-caption"></p>
+            </div>
+          </div>
+
+        </div>
 
         <h4 style="color:#7a571f; padding-top: 30px">Collaborative</h4>
         <h4 style="margin-bottom: 30px; color:white">Wireframing</h4>
@@ -382,6 +413,8 @@
         <h4 style="margin-bottom: 30px; color:white">What We Learned</h4>
 
     </div>
+
+    <script src="./scroll-script.js"></script>
 </body>
 
 </html>
