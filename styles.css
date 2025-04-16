@@ -203,7 +203,7 @@ a:hover {
 
 .highlight-white {
     color: white;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 ::-webkit-scrollbar {
