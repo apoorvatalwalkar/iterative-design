@@ -1,0 +1,78 @@
+.body {
+    overflow-x: hidden;
+}
+.scroll-section {
+  position: sticky;
+  top: 25vh; /* Starts in the middle of the screen (25vh + 50vh = 75vh occupied) */
+  height: 50vh;
+  background: #111;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.horizontal-track {
+  display: flex;
+  transition: transform 0.5s linear;
+  gap: 1rem;
+  padding: 1rem;
+  width: max-content;
+}
+
+.horizontal-track img {
+  height: 50vh;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+#image-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#image-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#overlay-content {
+  text-align: center;
+  max-width: 90%;
+  max-height: 90%;
+  animation: zoomIn 0.3s ease;
+}
+
+#overlay-img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 12px;
+}
+
+#overlay-caption {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
