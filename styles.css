@@ -96,7 +96,7 @@ hr.solid {
 }
 
 .flex-container {
-    padding: 60px 200px;
+    padding: 30px 250px;
     flex-direction: column;
     text-align: left;
     align-items: stretch;
@@ -204,4 +204,16 @@ a:hover {
 .highlight-white {
     color: white;
     font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 24px;
+    height: 8px;
+}
+  
+
+::-webkit-scrollbar-thumb {
+    background-color: #cccccc88; 
+    border-radius: 20px;
+    height: 8px;
 }
