@@ -20,7 +20,7 @@
 </div>
 <div class="header">
     <h1>Iterative Design</h1>
-    <h2>Warp AI Community</h2>
+    <h2 style="color: white;">Warp AI Community</h2>
 </div>
 
 <body>
@@ -28,8 +28,8 @@
         <!-- <h4 style="text-align: center;">Contents</h4> -->
         <div class="card-container" style="justify-content: space-around; padding-top:10px; padding-bottom:20px">
             <a href="#context">Context</a>
-            <a href="#getting-started">Getting Started</a>
             <a href="#sketches">Sketching and Wireframing</a>
+            <a href="#iterative">Iterating on Feedback</a>
             <a href="#hi-fi">Hi-Fi Prototyping</a>
             <a href="#results">Results and Takeaways</a>
         </div>
@@ -236,6 +236,12 @@
             FINALIZED ANNOTATED WIREFRAMES
         </h4>
 
+        <hr class="solid">
+    </div>
+
+    <div class="flex-container" id="iterative">
+        <h3 style="color: #7a571f; padding-top:50px">Part Three</h3>
+        <h3 style="margin-bottom: 30px; color:white">Iterating on Feedback</h3>
 
         <h4 style="color:#7a571f; padding-top: 30px">Receiving</h4>
         <h4 style="margin-bottom: 30px; color:white">Wireframe Feedback</h4>
@@ -264,7 +270,7 @@
         </div>
 
 
-        <h4 style="color:#7a571f; padding-top: 30px">Replace with smth</h4>
+        <h4 style="color:#7a571f; padding-top: 30px">Incorporating feedback</h4>
         <h4 style="margin-bottom: 30px; color:white">Iterating on Our Design </h4>
         <p>
             So back to the whiteboard we went, and decided to think critically about the pathways users would take
@@ -293,8 +299,8 @@
                     <li>Opening an object in Warp Terminal for viewing and editing</li>
                 </ul>
             </div>
-
         </div>
+
         <p>We quickly wrote up a technical document discussing this new redesign in much more detail than before, and
             sent it over to the Warp team. They were pleased with this new perspective, and our new strategy was
             successful! </p>
@@ -303,7 +309,7 @@
     </div>
 
     <div class="flex-container" id="hi-fi">
-        <h3 style="color:#6f839f">Part Three</h4>
+        <h3 style="color:#6f839f">Part Four</h4>
             <h3 style="margin-bottom: 30px; color:white">Hi-Fi Prototyping</h4>
                 <h4 style="color:#6f839f; padding-top: 30px">Developing</h4>
                 <h4 style="margin-bottom: 30px; color:white">Common Components</h4>
@@ -342,7 +348,7 @@
                     session.
                 </p>
 
-                <div class="h-scroll-container"
+                <!-- <div class="h-scroll-container"
                     style="width: 100%; overflow-x: scroll; display: flex; -webkit-overflow-scrolling: touch">
                     <div style="width: fit-content; display: flex; flex-direction: row;">
                         <div style="display: flex; flex-direction: column; width: fit-content">
@@ -369,7 +375,10 @@
                             <img style="width: 40rem; max-width: none;" src="./assets/hifi_wc_home.png">
                         </div>
                     </div>
-                </div>
+                </div> -->
+                
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); margin: 2rem 0rem" width="100%" height="600" src="https://embed.figma.com/design/BhpgGy0QfRw2gxvB4yyUtk/Warp-AI-Hi-Fis?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+
                 <br>
                 <p>
                     A more targeted, searchable version of suggested community objects is available in the Warp Command
@@ -380,39 +389,145 @@
                     personal Warp Drive. Our cards are simply a UI wrapper around the core object. Since all objects are
                     stored in one’s Warp Drive, we added a one-click step to publish content directly to Warp Community.
                     This continues our vision to make it just as easy to share content to Warp Community.
-                    <br><br>
+                    Below, we've summarized the affordances available in this sharing "loop".
+                </p>
+
+                <div class="card-container">
+                    <div class="card" style="width: 600px; margin-right: 1rem;">
+                        <p style="line-height:0.5; padding-top:10px; color: white;">Implementing Content</p>
+                        <ul>
+                            <li>Natural language prompt requesting help retrieves relevant content from WC, search-engine style</li>
+                            <li>General language prompt receives suggestions from WC</li>
+                            <li>Warp command palette offers in-app searchable WC</li>
+                            <li>Warp community webpage is external hub for content</li>
+                            <li>Managing the version of the object on Warp Community</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="width: 600px; margin-left: 1rem;">
+                        <p style="line-height:0.5; padding-top:10px; color: white;">Sharing Content</p>
+                        <ul>
+                            <li>Publish any object within one's local WC</li>
+                            <li>View and fork suggested WC content within the local Warp app to customize and re-share to WC</li>
+                            <li>Warp Community webpage metrics incentivize sharing with # stars, # forks, and # implements tracked</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>
                     We finally designed an external, web interface for Warp Community separate from the Warp Terminal.
                     Here users are able to search and explore shared content independent of a working session within
                     Warp Terminal. The landing page turns into a Discovery page upon scrolling, with both recommended
                     and trending objects. Using the search bar turns Discovery into Searching. Objects (and their cards)
-                    are neatly rendered in full pages, optimized for reading over development experience. The complete
-                    details and thought processes behind this hi-fi design can be found in this demo Loom video:
+                    are neatly rendered in full pages, optimized for reading over development experience.
                     <br><br>
                 </p>
 
-                <video controls src="./assets/loom_video.mp4"
-                    style="width: 80%; margin-left: auto; margin-right: auto;"></video>
+                
+                <div style="display: flex; flex-direction: row; width: 100%">
+                    <div style="display: flex; flex-direction: column; width: 100%; margin-right: 2rem;">
+                        <p>
+                            As just discussed, our wireframe were split between screens for Warp Terminal and screens for Warp Community.
+                            This split created additional complexity since we wanted to help users seamlessly transition between the two and avoid high cognitive load.
+                            We used Figma's prototyping system to both model and track the interaction flows between all these screens. 
+                            This is visualized on the right.
+                        </p>
+                    </div>
+                    <div style="width: 40rem; aspect-ratio: 1.28; overflow: hidden;">
+                        <img src="./assets/figma_prototyping.png" style="display: block; max-width: 100%; height: auto;">
+                    </div>
+                </div>
+
 
                 <hr class="solid">
     </div>
 
     <div class="flex-container" id="results">
 
-        <h3 style="color: rgb(130 160 121);">Part Four</h3>
+        <h3 style="color: rgb(130 160 121);">Part Five</h3>
         <h3 style="margin-bottom: 30px; color:white">Results and Takeaways</h3>
-
-        <p>txt here</p>
 
         <h4 style="color: rgb(130 160 121); padding-top: 30px">Results</h4>
         <h4 style="margin-bottom: 30px; color:white">Final Design</h4>
 
+        <p>
+            We demonstrate our final design in the following Loom video. We walk through the implementation interaction flows 
+            (using content from Warp community in the current session) and the sharing interaction flows 
+            (publishing content to Warp community). We also demonstrate the web interface for Warp Community and how it re-integrates with the Warp Terminal.
+            These are facilitated by extensive prototyping, interaction, and flow set-ups in Figma.
+        </p>
+        <br><br>
+
+        <video controls src="./assets/loom_video.mp4"
+        style="width: 80%; margin-left: auto; margin-right: auto;"></video>
+
+
         <h4 style="color: rgb(130 160 121); padding-top: 30px">Feedback</h4>
         <h4 style="margin-bottom: 30px; color:white">Meeting with the Company</h4>
+
+        <style>
+            .dropcap {
+                float: left;
+                font-size: 3em;
+                font-weight: lighter;
+                line-height: 1;
+                padding-right: 0.2em;
+                font-weight: bold;
+            }
+        </style>
+        <p>
+            We soon met with Warp's design team to present our version of Warp Community and receive a final round of feedback.
+            <br><br>
+            <span class="dropcap">1</span>Their key insight was to further consider the unique scope of Warp, namely the fact that 
+            <span class="highlight-white">the Warp app was an actual console terminal with terminal users</span>.
+            This brought additional design considerations that we hadn't factored in: constraints that come with terminal environments and UI.
+            Our card design that facilitated implementation and sharing required mouse clicking which neglects many 
+            <span class="highlight-white">keyboard-only power users</span> (hello from VIM!).
+            This led to a productive discussion on introducing tabbing order and a numbering scheme amenable to intuitive keyboard shortcuts.
+            <br><br>
+
+            <span class="dropcap">2</span>The Warp team was also happy to see our integration of object creation and publication flow into the local Warp Drive.
+            However, they brought up a great point for future demonstrations to consider the terminal pane setup of these interaction flows that move between different app states.
+            Indeed, <span class="highlight-white">developers often obssess over their IDE and terminal configurations</span>, so greater care would help create an even better product.
+            While we piggy-backed off the existing object pane system, in the future we could wireframe additional terminal layouts to see what our proposal looks like across 
+            a wider gamut of users. 
+            <br><br>
+
+            <span class="dropcap">3</span>Finally, we discussed the 
+            <span class="highlight-white">implications of interfacing users with large language models compared to traditional search and recommendation algorithms</span>
+            (e.g. the core AI terminal session v.s. suggestions from local Warp Drive). 
+            Our design of Warp Community heavily relies on "pulling" content from the centralized hub to a local Warp session,
+            and this could work in either direction. LLMs have incredible flexibility and reasoning powers, yet they hallucinate and are preceived as unreliable.
+            Meanwhile user-validated content from a search algorithm has high-trust but cannot cover as much scenario ground. 
+            These case-by-base tradeoffs are constant considerations in designing for AI tools such as Warp.
+
+        </p>
 
         <h4 style="color: rgb(130 160 121); padding-top: 30px">Team Takeaways</h4>
         <h4 style="margin-bottom: 30px; color:white">What We Learned</h4>
 
+        <p>
+            This was a great experience for us to work with a real company and product.
+            We practiced iterative design out of necessity and, in retrospect, saw first-hand how the process arrives at a product that betters serves the user.
+            Our hi-fi prototype was a vast improvement from where we started.
+            In this process, we learned to ask questions and the importance of asking them <i>soon</i>. 
+            Our initial direction headed off-course and we could have saved everyone's time by asking the right questions earlier.
+            <br><br>
+
+            We also learned that the design sits in context of the product, where it is used, and the goals of the company.
+            Our initial fixation on community platform-building stemmed from losing sight of the project's defined success metrics,
+            which center around increasing user productivity/engagement/retention of the Warp Terminal itself. 
+            In defining the relation of Warp Community to Warp Terminal, we were able to iteratively arrive at a proposal that the Warp Team was excited to receive.
+            <br><br>
+
+            Finally, we would like to thank the Warp team for the opportunity to design on their product and great feedback throughout the process.
+            We would also like to thank Vanessa Cho from Google Design for her mentorship and guidance throughout the project and the
+            course staff for Brown's CSCI 1300 Interaction Design course.
+            <br><br>
+        </p>
+
     </div>
+
+    <p style="width: 100%; text-align: center; margin-bottom: 8rem;">Designed with ❤️ in Providence</p>
 
     <script src="./scroll-script.js"></script>
 </body>

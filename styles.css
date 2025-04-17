@@ -180,6 +180,12 @@ p {
     line-height: 1.5;
 }
 
+table {
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
 a {
     color: rgb(130 160 121);
     text-decoration: none;
@@ -207,7 +213,7 @@ a:hover {
 }
 
 ::-webkit-scrollbar {
-    width: 24px;
+    width: 8px;
     height: 8px;
 }
   

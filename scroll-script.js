@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
     const end = wrapperTop + wrapperHeight - windowHeight / 2;
 
     if (scrollY >= start && scrollY <= end) {
-        const progress = (scrollY - start) / (end - start);
+        const progress = (scrollY - start) / (end - start) * 0.2;
 
         const maxScroll = track.scrollWidth - window.innerWidth + 500;
         const translateX = Math.min(progress * maxScroll, maxScroll);
