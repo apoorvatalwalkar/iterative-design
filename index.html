@@ -26,7 +26,7 @@
 <body>
     <div class="flex-container" style="padding-top: 50px;">
         <!-- <h4 style="text-align: center;">Contents</h4> -->
-        <div class="card-container" style="justify-content: space-around; padding-top:10px; padding-bottom:20px">
+        <div class="card-container" style="justify-content: space-between; padding-top:10px; padding-bottom:20px">
             <a href="#context">Context</a>
             <a href="#sketches">Sketching and Wireframing</a>
             <a href="#iterative">Iterating on Feedback</a>
@@ -64,21 +64,23 @@
 
     <div class="flex-container" id="context">
         <h3 style="color:rgb(137, 121, 160)">Part One</h3>
-        <h3 style="margin-bottom: 30px; color: white">Context</h3>
+        <h3 style="margin-bottom: 15px; color: white">Context</h3>
         <div style="display: flex; flex-direction: row;">
-            <p style="margin-right: 6rem;">
+            <p style="margin-right: 3rem;">
                 Warp is a startup trying to modernize the conventional terminal with artificial intelligence features.
                 With features like automatic command completion, smart suggestions for tons of CLI tools, and numerous
                 quality-of-life improvements for users, Warp aims to optimize every developer’s workflow.
                 <br>
-                <br>
-                Through Brown’s CSCI 1300 course on interaction design, we’ve been tasked to design a community page for
+                
+            </p>
+            <img src="./assets/warp_logo.png" style="width: 5rem; height: 5rem; margin-right: 3rem">
+        </div>
+        <p>
+            Through Brown’s CSCI 1300 course on interaction design, we’ve been tasked to design a community page for
                 Warp in an official partnership through Google Ventures. Warp Community is where users share everything
                 from simple workflows to complex automations, even if they’re an individual hobbyist dev or an industry
                 professional who relies on Warp every day.
-            </p>
-            <img src="./assets/warp_logo.jpg" style="width: 20rem; height: 20rem;">
-        </div>
+        </p>
 
         <h4 style="color:rgb(137, 121, 160); padding-top:30px" id="getting-started">Getting Started</h4>
         <h4 style="margin-bottom: 30px; color:white">Present Factors</h4>
@@ -161,7 +163,7 @@
     </div>
 
     <div class="flex-container" id="sketches">
-        <h3 style="color: #7a571f; padding-top:50px">Part Two</h3>
+        <h3 style="color: #9f6631; padding-top:50px">Part Two</h3>
         <h3 style="margin-bottom: 30px; color:white">Sketching and Wireframing</h3>
 
         <p style="line-height:0.5; padding-top:10px; color: white;">Target Users</p>
@@ -177,16 +179,13 @@
         <img src="./assets/personas.png" style="width: 10rem; height: 10rem; margin-left: 4rem;">
         </div>
 
-        <h4 style="color:#7a571f">Individual</h4>
+        <h4 style="color:#9f6631">Individual</h4>
         <h4 style="margin-bottom: 30px; color:white">Preliminary Sketches</h4>
         <p>
             We started off by independently brainstorming designs for Warp Community, and drawing up the following
             sketches. Afterwards, we came together and synthesized components we liked from each member into a
             group-sketch on some whiteboards.
         </p>
-        <h4>
-            SPANDAN SCROLL COMPONENT W/ SKETCHES
-        </h4>
         <div> <!-- scroll section for all our sketches -->
 
           <div class="scroll-section-wrapper" id="scroll-wrapper">
@@ -218,7 +217,7 @@
 
         </div>
 
-        <h4 style="color:#7a571f; padding-top: 30px">Collaborative</h4>
+        <h4 style="color:#9f6631; padding-top: 30px">Collaborative</h4>
         <h4 style="margin-bottom: 30px; color:white">Wireframing</h4>
         <p>
             Consolidating, we wrapped all sorts of variations on content–such as “article”, “text thread”, “note”, and
@@ -232,18 +231,16 @@
             We mocked up our whiteboard-synthesizing of our sketches into lo-fi wireframes using Balsamiq.
         </p>
 
-        <h4>
-            FINALIZED ANNOTATED WIREFRAMES
-        </h4>
+        <img src="assets/annotated-lo-fis.png" style="padding: 20px 0px">
 
         <hr class="solid">
     </div>
 
     <div class="flex-container" id="iterative">
-        <h3 style="color: #7a571f; padding-top:50px">Part Three</h3>
+        <h3 style="color: #9f4731;">Part Three</h3>
         <h3 style="margin-bottom: 30px; color:white">Iterating on Feedback</h3>
 
-        <h4 style="color:#7a571f; padding-top: 30px">Receiving</h4>
+        <h4 style="color:#9f4731; padding-top: 30px">Receiving</h4>
         <h4 style="margin-bottom: 30px; color:white">Wireframe Feedback</h4>
         <p>
             A weekend later, we got some feedback from the Warp team and met with Vanessa Cho, VP at Google Design. She
@@ -263,14 +260,14 @@
             within the Warp Terminal in a beneficial way with Warp Community?
         </p>
         <div class="card" style="padding:60px 100px; margin:50px 0px">
-            <h4 style="text-align:center; color: #b18949;">Key Takeaway</h4>
+            <h4 style="text-align:center; color: #c05e45;">Key Takeaway</h4>
             <h3 style="text-align:center; color: white">We needed to prioritize the success metrics and draw a path to
                 the “house” we created to close the sharing loop.
             </h3>
         </div>
 
 
-        <h4 style="color:#7a571f; padding-top: 30px">Incorporating feedback</h4>
+        <h4 style="color:#9f4731; padding-top: 30px">Incorporating feedback</h4>
         <h4 style="margin-bottom: 30px; color:white">Iterating on Our Design </h4>
         <p>
             So back to the whiteboard we went, and decided to think critically about the pathways users would take
@@ -314,7 +311,7 @@
                 <h4 style="color:#6f839f; padding-top: 30px">Developing</h4>
                 <h4 style="margin-bottom: 30px; color:white">Common Components</h4>
 
-                <div style="display: flex; flex-direction: row; width: 100%">
+                <div style="display: flex; flex-direction: row; width: 100%; align-items: center;">
                     <div style="display: flex; flex-direction: column; width: 40rem; margin-right: 2rem;">
                         <p>
                             Now that our designs spanned both features within the Warp Terminal and a Warp community
