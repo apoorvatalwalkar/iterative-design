@@ -1,31 +1,29 @@
-.body {
-    overflow-x: hidden;
-}
-.scroll-section {
-  position: sticky;
-  top: 25vh; /* Starts in the middle of the screen (25vh + 50vh = 75vh occupied) */
-  height: 50vh;
-  background: #111;
+.scroll-container {
   display: flex;
-  align-items: center;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.horizontal-track {
-  display: flex;
-  transition: transform 0.5s linear;
-  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
   padding: 1rem;
-  width: max-content;
+  gap: 1rem;
+  white-space: nowrap;
+  height: 40vh;
 }
 
-.horizontal-track img {
-  height: 50vh;
-  width: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-  border-radius: 8px;
+.scroll-container img {
+  height: 100%;        
+  width: auto;        
+  border-radius: 10px;
+  flex-shrink: 0;      
+}
+
+
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
 }
 
 #image-overlay {
@@ -58,13 +56,13 @@
   max-height: 80vh;
   border-radius: 12px;
 }
-
+ 
 #overlay-caption {
   color: white;
   margin-top: 1rem;
   font-size: 1.2rem;
 }
-
+ 
 @keyframes zoomIn {
   from {
     transform: scale(0.9);
@@ -75,4 +73,3 @@
     opacity: 1;
   }
 }
-
