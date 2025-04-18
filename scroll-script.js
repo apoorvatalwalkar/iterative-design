@@ -1,40 +1,62 @@
-const track = document.getElementById("horizontal-track");
-const wrapper = document.getElementById("scroll-wrapper");
+const container = document.getElementById('carousel');
+let autoScrollInterval;
+let userHasInteracted = false;
 
-// Handle horizontal scroll
-window.addEventListener("scroll", () => {
-    const wrapperTop = wrapper.offsetTop;
-    const wrapperHeight = wrapper.offsetHeight;
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+}
 
-    const start = wrapperTop - windowHeight / 2;
-    const end = wrapperTop + wrapperHeight - windowHeight / 2;
+function startAutoScroll() {
+    if (autoScrollInterval || userHasInteracted) return;
+    autoScrollInterval = setInterval(() => {
+        if (!userHasInteracted && isInViewport(container)) {
+            container.scrollLeft += 1;
+        }
+    }, 20);
+}
 
-    if (scrollY >= start && scrollY <= end) {
-        const progress = (scrollY - start) / (end - start) * 0.2;
+function stopAutoScrollForever() {
+    userHasInteracted = true;
+    clearInterval(autoScrollInterval);
+    autoScrollInterval = null;
+}
 
-        const maxScroll = track.scrollWidth - window.innerWidth + 500;
-        const translateX = Math.min(progress * maxScroll, maxScroll);
-        track.style.transform = `translateX(-${translateX}px)`;
+
+let lastScrollLeft = container.scrollLeft;
+container.addEventListener('scroll', () => {
+    const currentScroll = container.scrollLeft;
+    if (Math.abs(currentScroll - lastScrollLeft) > 2) {
+        stopAutoScrollForever();
     }
+    lastScrollLeft = currentScroll;
 });
 
-// Image overlay functionality
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !userHasInteracted) {
+            startAutoScroll();
+        }
+    });
+}, {
+    threshold: 0.75
+});
+
+observer.observe(container);
+
 const overlay = document.getElementById("image-overlay");
 const overlayImg = document.getElementById("overlay-img");
 const overlayCaption = document.getElementById("overlay-caption");
 
-// Handle image clicks to show the overlay
-document.querySelectorAll(".horizontal-track img").forEach((img) => {
-    img.addEventListener("click", (e) => {
+document.querySelectorAll(".scroll-container img").forEach((img) => {
+    img.addEventListener("click", (_) => {
         overlayImg.src = img.src; // Set the clicked image as the overlay image
         overlayCaption.textContent = img.alt || ""; // Set the caption
         overlay.classList.add("show"); // Show the overlay
     });
 });
 
-// Close the overlay when clicked
 overlay.addEventListener("click", () => {
     overlay.classList.remove("show");
 });

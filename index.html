@@ -67,7 +67,7 @@
         <h3 style="margin-bottom: 15px; color: white">Context</h3>
         <div style="display: flex; flex-direction: row;">
             <p style="margin-right: 3rem;">
-                Warp is a startup trying to modernize the conventional terminal with artificial intelligence features.
+                Warp is a startup modernizing the conventional terminal with artificial intelligence features.
                 With features like automatic command completion, smart suggestions for tons of CLI tools, and numerous
                 quality-of-life improvements for users, Warp aims to optimize every developer’s workflow.
                 <br>
@@ -98,28 +98,22 @@
             <div class="card" style="width:460px; margin-right: 2rem;">
                 <p style="padding-top:10px; color: white;">Existing Considerations</p>
                 <ul>
-                    <li>Users currently share solutions through fragmented channels (GitHub, Reddit, Discord, Twitter).
+                    <li>Users currently share solutions through fragmented channels (GitHub, Reddit, Discord) and unstandardized mediums 
                     </li>
-                    <li>Some solutions are shared via blog posts but lack standardization and easy implementation.</li>
-                    <li>Competitive products lack <i>comprehensive</i> community features.</li>
-                    <li>Interface needs to balance discovery with ease of implementation.</li>
+                    <li>Competitive products lack comprehensive and <i> fully integrated</i> community features.</li>
                 </ul>
             </div>
             <div class="card" style="width:460px">
                 <p style="padding-top:10px; color: white;">Customer Motivations</p>
                 <ul>
-                    <li>Desire to improve productivity and output quality working with AI tools.</li>
-                    <li>Want to learn best practices from other experienced users. </li>
+                    <li>Desire to improve productivity using AI tools and learning from other experienced developers.</li>
                     <li>Seek to stay current with rapidly evolving AI techniques and approaches. </li>
-                    <li>Hope to reduce time spent creating rules, plans, and prompts from scratch.</li>
                 </ul>
             </div>
             <div class="card" style="width:460px; margin-left: 2rem;">
                 <p style="padding-top:10px; color: white;">Issues with Existing Solutions</p>
                 <ul>
                     <li>Difficulty finding high-quality, relevant examples of rules, plans, and prompts. </li>
-                    <li>Uncertainty about whether current approach is optimal or efficient.</li>
-                    <li>Limited visibility into how others are solving similar problems.</li>
                     <li>No streamlined way to implement discovered solutions into existing projects.</li>
                     <li>Lack of feedback on their own created content</li>
                 </ul>
@@ -188,9 +182,7 @@
         </p>
         <div> <!-- scroll section for all our sketches -->
 
-          <div class="scroll-section-wrapper" id="scroll-wrapper">
-            <div class="scroll-section" id="scroll-section">
-              <div class="horizontal-track" id="horizontal-track">
+            <div class="scroll-container" id="carousel">
                 <img src="./assets/sketches/sketch1.png" alt="Sketch 1" />
                 <img src="./assets/sketches/sketch2.png" alt="Sketch 2" />
                 <img src="./assets/sketches/sketch3.png" alt="Sketch 3" />
@@ -204,9 +196,7 @@
                 <img src="./assets/sketches/sketch11.png" alt="Sketch 11" />
                 <img src="./assets/sketches/sketch12.png" alt="Sketch 12" />
                 <img src="./assets/sketches/sketch13.png" alt="Sketch 13" />
-              </div>
             </div>
-          </div>
 
           <div id="image-overlay" class="hidden">
             <div id="overlay-content">
@@ -223,11 +213,12 @@
             Consolidating, we wrapped all sorts of variations on content–such as “article”, “text thread”, “note”, and
             more–into a single “post” entity that is the core unit of information for Warp Community objects. We
             realized too many forms of information potentially create confusion and mental overload for the user (i.e.
-            avoiding four different forms for each object type). Technical users share their objects within posts (with
-            great flexibility offered via markdown). A unified component brings consistency and immediate familiarity to
-            the user.
+            avoiding four different designs for the different object types).
+            A unified component brings consistency and immediate familiarity to the user.
             <br>
             <br>
+            The combined vision included a search-first landing page with trending and recommended content, 
+            discover and search pages, and both post creation and post viewing capabilities.
             We mocked up our whiteboard-synthesizing of our sketches into lo-fi wireframes using Balsamiq.
         </p>
 
@@ -244,12 +235,12 @@
         <h4 style="margin-bottom: 30px; color:white">Wireframe Feedback</h4>
         <p>
             A weekend later, we got some feedback from the Warp team and met with Vanessa Cho, VP at Google Design. She
-            gave us a ton of super crucial feedback - which was to focus on the success metrics. Our design so far had
+            gave us a ton of super crucial feedback &mdash; which was to focus on the success metrics. Our design so far had
             focused on providing a Warp Community interface to house shared Warp objects, but there was nothing that
             prioritized the Warp Terminal user. We didn’t connect the sharing platform with the app itself.
             <br>
             <br>
-            This is something the Warp team also mentioned - why would one use Warp Community over Reddit, X, or
+            This is something the Warp team also mentioned &mdash; why would one use Warp Community over Reddit, X, or
             HackerNews? We needed to provide a competitive advantage, one that would maximize user contribution rate,
             user implementation rate (usage in Warp Terminal), and most critically save time and boost engagement.
             <br>
@@ -273,6 +264,7 @@
             So back to the whiteboard we went, and decided to think critically about the pathways users would take
             between Warp Community and Warp Terminal. As in, how does a workflow from someone’s Warp Drive actually end
             up on Warp Community? How does that same workflow save another user 3 hours of development effort?
+            Sketching this out helped us arrive at the following:
         </p>
         <img src="./assets/iterating_on_feedback_whiteboard.jpg" style="width: 100%; margin-top: 2rem;">
         <div class="card-container">
@@ -298,9 +290,12 @@
             </div>
         </div>
 
-        <p>We quickly wrote up a technical document discussing this new redesign in much more detail than before, and
+        <p>
+            The new focus on sharing and implementing required designing within the existing Warp Terminal UI and pruning down our proposed Warp Community platform.
+            We quickly wrote up a technical document discussing this new redesign in much more detail than before, and
             sent it over to the Warp team. They were pleased with this new perspective, and our new strategy was
-            successful! </p>
+            successful! 
+        </p>
 
         <hr class="solid">
     </div>
@@ -314,16 +309,16 @@
                 <div style="display: flex; flex-direction: row; width: 100%; align-items: center;">
                     <div style="display: flex; flex-direction: column; width: 40rem; margin-right: 2rem;">
                         <p>
-                            Now that our designs spanned both features within the Warp Terminal and a Warp community
-                            platform, we created a design style guide for consistent components. This was key for the
-                            cards that represented objects which appeared during a terminal session or a Warp Community
+                            Since features now span across both the Warp Terminal and a Warp Community
+                            platform, we created a design style guide. This was key for the
+                            cards that represented objects that appear during a terminal session or a Warp Community
                             search.
                             <br><br>
                             In closing the sharing loop, it needed to be as easy as possible for a user to both run a
                             shared object and share their own.
                             <br><br>
-                            Common, consistent UI for the proposed “sharing” and “implementing” interactions -- that
-                            came out of iterating on feedback -- help facilitate the flows from Warp Terminal to Warp
+                            Common, consistent UI for the proposed “sharing” and “implementing” interactions &mdash; which
+                            came out of iterating on feedback &mdash; help facilitate the flows from Warp Terminal to Warp
                             Community and back.
                         </p>
                     </div>
@@ -340,7 +335,7 @@
                     work. Just as the LLM provides suggestions to a user’s workflow, relevant objects are pulled from
                     Warm Community to augment the LLM response and displayed as cards below the prompt which can
                     immediately be run with a single click. Our vision was to make it as easy as possible to use Warp
-                    Community content for the average Warp user -- no need to go out of one’s way. Users can also
+                    Community content for the average Warp user &mdash; no need to go out of one’s way. Users can also
                     collapse this UI to persistently opt-out (or opt back in!) from suggested community posts for a
                     session.
                 </p>
@@ -386,7 +381,7 @@
                     personal Warp Drive. Our cards are simply a UI wrapper around the core object. Since all objects are
                     stored in one’s Warp Drive, we added a one-click step to publish content directly to Warp Community.
                     This continues our vision to make it just as easy to share content to Warp Community.
-                    Below, we've summarized the affordances available in this sharing "loop".
+                    Below we've summarized the affordances available in this sharing "loop":
                 </p>
 
                 <div class="card-container">
@@ -415,7 +410,7 @@
                     Here users are able to search and explore shared content independent of a working session within
                     Warp Terminal. The landing page turns into a Discovery page upon scrolling, with both recommended
                     and trending objects. Using the search bar turns Discovery into Searching. Objects (and their cards)
-                    are neatly rendered in full pages, optimized for reading over development experience.
+                    are neatly rendered in full pages for reading.
                     <br><br>
                 </p>
 
@@ -423,8 +418,8 @@
                 <div style="display: flex; flex-direction: row; width: 100%">
                     <div style="display: flex; flex-direction: column; width: 100%; margin-right: 2rem;">
                         <p>
-                            As just discussed, our wireframe were split between screens for Warp Terminal and screens for Warp Community.
-                            This split created additional complexity since we wanted to help users seamlessly transition between the two and avoid high cognitive load.
+                            The divide between Warp Terminal and Warp Community became additional complexity to design around
+                            since we wanted to help users seamlessly transition between the two.
                             We used Figma's prototyping system to both model and track the interaction flows between all these screens. 
                             This is visualized on the right.
                         </p>
@@ -476,7 +471,7 @@
             <br><br>
             <span class="dropcap">1</span>Their key insight was to further consider the unique scope of Warp, namely the fact that 
             <span class="highlight-white">the Warp app was an actual console terminal with terminal users</span>.
-            This brought additional design considerations that we hadn't factored in: constraints that come with terminal environments and UI.
+            <!-- This brought additional design considerations that we hadn't factored in: constraints that come with terminal environments and UI. -->
             Our card design that facilitated implementation and sharing required mouse clicking which neglects many 
             <span class="highlight-white">keyboard-only power users</span> (hello from VIM!).
             This led to a productive discussion on introducing tabbing order and a numbering scheme amenable to intuitive keyboard shortcuts.
@@ -485,16 +480,18 @@
             <span class="dropcap">2</span>The Warp team was also happy to see our integration of object creation and publication flow into the local Warp Drive.
             However, they brought up a great point for future demonstrations to consider the terminal pane setup of these interaction flows that move between different app states.
             Indeed, <span class="highlight-white">developers often obssess over their IDE and terminal configurations</span>, so greater care would help create an even better product.
-            While we piggy-backed off the existing object pane system, in the future we could wireframe additional terminal layouts to see what our proposal looks like across 
-            a wider gamut of users. 
+            <!-- While we piggy-backed off the existing object pane system,  -->
+            In the future we could wireframe additional terminal layouts to see what our proposal looks like across a wider gamut of users. 
             <br><br>
 
             <span class="dropcap">3</span>Finally, we discussed the 
-            <span class="highlight-white">implications of interfacing users with large language models compared to traditional search and recommendation algorithms</span>
-            (e.g. the core AI terminal session v.s. suggestions from local Warp Drive). 
+            <span class="highlight-white">implications of interfacing users with large language models compared to traditional search and recommendation algorithms</span>.
+            <!-- (e.g. the core AI terminal session v.s. suggestions from local Warp Drive).  -->
             Our design of Warp Community heavily relies on "pulling" content from the centralized hub to a local Warp session,
-            and this could work in either direction. LLMs have incredible flexibility and reasoning powers, yet they hallucinate and are preceived as unreliable.
-            Meanwhile user-validated content from a search algorithm has high-trust but cannot cover as much scenario ground. 
+            and this could work in either direction. 
+            <!-- LLMs have incredible flexibility and reasoning powers, yet they hallucinate and are preceived as unreliable.
+            Meanwhile user-validated content from a search algorithm has high-trust but cannot cover as much scenario ground.  -->
+            LLM responses are flexible but hallucinate, while search algorithm responses are reliable but cannot cover as much scenario ground.
             These case-by-base tradeoffs are constant considerations in designing for AI tools such as Warp.
 
         </p>
