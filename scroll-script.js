@@ -49,10 +49,12 @@ const overlay = document.getElementById("image-overlay");
 const overlayImg = document.getElementById("overlay-img");
 const overlayCaption = document.getElementById("overlay-caption");
 
-img.addEventListener("click", (_) => {
-    overlayImg.src = img.src;
-    overlayCaption.textContent = img.alt || "";
-    overlay.classList.add("show");
+document.querySelectorAll(".scroll-container img").forEach((img) => {
+    img.addEventListener("click", (_) => {
+        overlayImg.src = img.src; // Set the clicked image as the overlay image
+        overlayCaption.textContent = img.alt || ""; // Set the caption
+        overlay.classList.add("show"); // Show the overlay
+    });
 });
 
 overlay.addEventListener("click", () => {
