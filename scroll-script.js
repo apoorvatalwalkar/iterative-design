@@ -54,8 +54,6 @@ img.addEventListener("click", (_) => {
     overlayCaption.textContent = img.alt || "";
     overlay.classList.add("show");
 });
-});
-
 
 overlay.addEventListener("click", () => {
     overlay.classList.remove("show");
